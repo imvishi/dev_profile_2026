@@ -2,21 +2,31 @@ import type { SkillGroup } from "./types";
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Languages & Stacks",
-    items: ["Ruby on Rails", "React", "JavaScript", "Python", "Kotlin", "SQL"],
+    category: "Languages",
+    items: ["Ruby", "JavaScript", "Python", "Kotlin", "Java", "SQL"],
   },
   {
-    category: "Architecture & System Design",
+    category: "Frontend Stack",
+    items: ["React", "JavaScript"],
+  },
+  {
+    category: "Backend Stack",
     items: [
-      "Distributed Systems",
-      "Microservices",
-      "Event-Driven Architecture",
-      "High-Level Design (HLD)",
-      "Low-Level Design (LLD)",
-      "Multi-Tenant SaaS Architecture",
+      "Ruby on Rails",
+      "Node.js",
       "REST APIs",
       "gRPC",
+      "Microservices",
+      "Distributed Systems",
+      "Event-Driven Architecture",
+      "Multi-Tenant SaaS Architecture",
+      "High-Level Design (HLD)",
+      "Low-Level Design (LLD)",
     ],
+  },
+  {
+    category: "Mobile Application Development",
+    items: ["Android", "Kotlin", "Java"],
   },
   {
     category: "Databases & Messaging",

@@ -9,14 +9,13 @@ export function ContactSection() {
         <SectionHeading
           eyebrow="Contact"
           title="Get in Touch"
-          description="Reporting tips, opportunities, and correspondence welcome."
         />
 
         <div className={styles.box}>
           <div>
-            <p className={styles.boxKicker}>Letters to the Editor</p>
+            <p className={styles.boxKicker}>Say Hello</p>
             <p className={styles.boxCopy}>
-              For roles, collaborations, or just to talk shop about distributed systems — reach out directly.
+              For roles, collaborations, or interesting ideas, I'm always open to a conversation.
             </p>
           </div>
           <dl className={styles.list}>
@@ -25,8 +24,8 @@ export function ContactSection() {
               <dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd>
             </div>
             <div>
-              <dt>Phone</dt>
-              <dd><a href={`tel:${profile.phone}`}>{profile.phone}</a></dd>
+              <dt>X</dt>
+              <dd><a href={profile.x} target="_blank" rel="noreferrer">{profile.x}</a></dd>
             </div>
             <div>
               <dt>GitHub</dt>

@@ -53,6 +53,7 @@
 }
 
 .grid {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
 }

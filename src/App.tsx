@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer } from "./components/layout/Footer";
 import { Masthead } from "./components/layout/Masthead";
 import { NavBar } from "./components/layout/NavBar";
+import { BulletinPage } from "./pages/BulletinPage";
 import { Home } from "./pages/Home";
 import { StoryPage } from "./pages/StoryPage";
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/story/:slug" element={<StoryPage />} />
+          <Route path="/update/:slug" element={<BulletinPage />} />
         </Routes>
       </main>
       <Footer />

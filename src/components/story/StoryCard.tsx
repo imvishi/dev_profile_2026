@@ -1,5 +1,5 @@
 import type { Story } from "../../data/types";
-import { StoryArt } from "./StoryArt";
+import { StoryVisual } from "./StoryVisual";
 import styles from "./StoryCard.module.css";
 
 interface StoryCardProps {
@@ -10,7 +10,11 @@ export function StoryCard({ story }: StoryCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.text}>
-        <p className="kicker">{story.kicker}</p>
+        <p className="kicker">
+          <a href={story.website_link} target="_blank" rel="noopener noreferrer">
+            {story.kicker}
+          </a>
+        </p>
         <h3 className={styles.headline}>
           <a href={`/story/${story.slug}`}>{story.headline}</a>
         </h3>
@@ -18,7 +22,7 @@ export function StoryCard({ story }: StoryCardProps) {
         <p className={`byline ${styles.byline}`}>{story.company}</p>
       </div>
       <a href={`/story/${story.slug}`} className={styles.artLink} tabIndex={-1} aria-hidden="true">
-        <StoryArt seed={story.artSeed} label={story.company} />
+        <StoryVisual story={story} />
       </a>
     </article>
   );

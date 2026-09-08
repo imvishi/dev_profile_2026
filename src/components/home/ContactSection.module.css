@@ -1,7 +1,6 @@
 .box {
   display: grid;
   gap: 28px;
-  border-top: var(--rule-thick) solid var(--color-ink);
   padding: 24px 0 4px;
 }
 

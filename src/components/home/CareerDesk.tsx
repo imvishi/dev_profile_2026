@@ -9,29 +9,21 @@ export function CareerDesk() {
         <SectionHeading
           eyebrow="Career Desk"
           title="Nine Years on the Beat"
-          description="A chronological record of roles, teams, and the systems built along the way."
         />
 
-        <ol className={styles.timeline}>
-          {experience.map((entry, index) => (
-            <li key={entry.company} className={styles.entry}>
-              <div className={styles.marker} aria-hidden="true">
-                <span className={styles.dot} />
-                {index < experience.length - 1 ? <span className={styles.line} /> : null}
-              </div>
-              <div className={styles.body}>
-                <p className="byline">{entry.dateRange}</p>
-                <h3 className={styles.role}>{entry.role}</h3>
-                <p className={styles.company}>{entry.company}</p>
-                {entry.context ? <p className={styles.context}>{entry.context}</p> : null}
-                <ul className={styles.bullets}>
-                  {entry.bullets.map((bullet, i) => (
-                    <li key={i}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
+        <ol className={`${styles.list} divided`}>
+          {experience.map((entry) => {
+            return (
+              <li key={entry.company} className={styles.entry}>
+                <span className={styles.dot} aria-hidden="true" />
+                <div className={styles.entryBody}>
+                  <h3 className={styles.role}>{entry.role}</h3>
+                  <p className={styles.company}>{entry.company}</p>
+                </div>
+                <p className={`byline ${styles.dateRange}`}>{entry.dateRange}</p>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </section>

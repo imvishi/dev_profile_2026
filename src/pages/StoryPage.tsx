@@ -1,6 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import { stories } from "../data/stories";
-import { StoryArt } from "../components/story/StoryArt";
+import { StoryVisual } from "../components/story/StoryVisual";
 import styles from "./StoryPage.module.css";
 
 export function StoryPage() {
@@ -19,15 +19,19 @@ export function StoryPage() {
         ← Back to the Front Page
       </a>
 
-      <p className="kicker">{story.kicker}</p>
+      <p className="kicker">
+        <a href={story.website_link} target="_blank" rel="noopener noreferrer">
+          {story.kicker}
+        </a>
+      </p>
       <h1 className={styles.headline}>{story.headline}</h1>
       <p className={styles.dek}>{story.dek}</p>
       <p className={`byline ${styles.byline}`}>
-        By Vishal Verma · {story.company} · {story.dateline}
+        {story.company} · {story.dateline}
       </p>
 
       <div className={styles.artFrame}>
-        <StoryArt seed={story.artSeed} label={story.company} />
+        <StoryVisual story={story} />
       </div>
 
       <div className={styles.layout}>

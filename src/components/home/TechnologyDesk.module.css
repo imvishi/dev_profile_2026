@@ -1,64 +1,79 @@
 .grid {
   display: grid;
-  gap: 0;
+  grid-template-columns: 1fr;
 }
 
-.box {
-  padding: 18px 0;
-  border-top: 1px solid var(--color-rule-hair);
+.card {
+  padding: 26px 0;
+  border-top: 1px dashed var(--color-rule-hair);
 }
 
-.box:first-child {
+.card:first-child {
   border-top: 0;
-  padding-top: 0;
 }
 
-.boxHead {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+.kicker {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
   margin-bottom: 10px;
 }
 
-.boxIndex {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--color-accent);
-}
-
-.boxTitle {
-  font-family: var(--font-condensed);
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+.stack {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.65;
   color: var(--color-ink);
+  max-width: 34em;
 }
 
-.itemList {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 10px;
-}
-
-.itemList li {
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  color: var(--color-ink);
-  padding: 5px 11px;
-  border: 1px solid var(--color-rule-soft);
-  border-radius: 2px;
-}
-
-@media (min-width: 720px) {
+@media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
   }
 
-  .box:nth-child(2) {
+  .card {
+    border-top: 1px dashed var(--color-rule-hair);
+    padding: 30px 32px;
+  }
+
+  .card:nth-child(-n + 2) {
     border-top: 0;
-    padding-top: 0;
+  }
+
+  .card:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .card:nth-child(2n) {
+    border-left: 1px solid var(--color-rule-hair);
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    border-top: 1px dashed var(--color-rule-hair);
+    border-left: 0;
+    padding: 32px 36px;
+  }
+
+  .card:nth-child(-n + 3) {
+    border-top: 0;
+  }
+
+  .card:nth-child(3n + 1) {
+    padding-left: 0;
+  }
+
+  .card:not(:nth-child(3n + 1)) {
+    border-left: 1px solid var(--color-rule-hair);
   }
 }

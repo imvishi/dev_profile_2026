@@ -2,7 +2,7 @@ import styles from "./NavBar.module.css";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/#top" },
-  { label: "Stories", href: "/#stories" },
+  { label: "Projects", href: "/#projects" },
   { label: "Career", href: "/#career" },
   { label: "Technology", href: "/#technology" },
   { label: "Profile", href: "/#profile" },

@@ -1,7 +1,13 @@
 .art {
   width: 100%;
   height: auto;
+  aspect-ratio: 400 / 248;
   background: var(--color-paper-alt);
+}
+
+.artImage {
+  display: block;
+  object-fit: cover;
 }
 
 .bg {

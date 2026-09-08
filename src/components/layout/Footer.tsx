@@ -10,14 +10,13 @@ export function Footer() {
         <div className={styles.mastCol}>
           <p className={styles.wordmark}>{profile.name}</p>
           <p className={styles.colophon}>
-            Independently written, edited, and shipped to production. Every story on this page is drawn from real
-            work — nothing here is invented.
+            A Software Engineer that can transform your innovative ideas into powerful and seamless digital solutions.
           </p>
         </div>
         <div className={styles.linkCol}>
           <p className={styles.colHeading}>Desks</p>
           <ul>
-            <li><a href="/#stories">Featured Stories</a></li>
+            <li><a href="/#projects">Projects</a></li>
             <li><a href="/#career">Career Desk</a></li>
             <li><a href="/#technology">Technology Desk</a></li>
             <li><a href="/#highlights">Highlights</a></li>
@@ -34,8 +33,7 @@ export function Footer() {
       </div>
       <div className="rule rule--thick" />
       <div className={`container ${styles.bottom}`}>
-        <span>© {year} {profile.name}. Published from {profile.location}.</span>
-        <span>Vol. IX — the ninth year on the masthead.</span>
+        <span>© {year} {profile.name}.</span>
       </div>
     </footer>
   );

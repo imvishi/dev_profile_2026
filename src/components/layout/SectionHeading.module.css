@@ -26,6 +26,6 @@
   max-width: 32em;
 }
 
-.heading .rule--thick {
+.heading :global(.rule--thick) {
   margin-top: 12px;
 }

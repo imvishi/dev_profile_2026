@@ -2,7 +2,7 @@ export interface Profile {
   name: string;
   title: string;
   location: string;
-  phone: string;
+  x:string;
   email: string;
   github: string;
   linkedin: string;
@@ -30,11 +30,14 @@ export interface Story {
   headline: string;
   dek: string;
   company: string;
+  website_link: string;
   dateline: string;
   tags: string[];
   body: string[];
   artSeed: number;
   featured?: boolean;
+  /** Filename of a real image in src/assets (e.g. "onelogin.webp"). Falls back to generated art when omitted. */
+  image?: string;
 }
 
 export interface Highlight {
