@@ -1,0 +1,92 @@
+.timeline {
+  list-style: none;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 20px;
+}
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-top: 6px;
+  flex: 0 0 auto;
+}
+
+.line {
+  width: 1px;
+  flex: 1 1 auto;
+  background: var(--color-rule-soft);
+  margin-top: 6px;
+}
+
+.body {
+  padding-bottom: 40px;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  margin-top: 6px;
+}
+
+.company {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  margin-top: 3px;
+}
+
+.context {
+  margin-top: 6px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+}
+
+.bullets {
+  list-style: none;
+  margin-top: 18px;
+  max-width: 62em;
+}
+
+.bullets li {
+  position: relative;
+  padding: 12px 0 12px 22px;
+  border-top: 1px solid var(--color-rule-hair);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+.bullets li:first-child {
+  border-top: 0;
+}
+
+.bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+@media (min-width: 720px) {
+  .entry {
+    grid-template-columns: 28px 1fr;
+    gap: 28px;
+  }
+}

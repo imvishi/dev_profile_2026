@@ -1,0 +1,38 @@
+.art {
+  width: 100%;
+  height: auto;
+  background: var(--color-paper-alt);
+}
+
+.bg {
+  fill: var(--color-paper-alt);
+}
+
+.hatch line {
+  stroke: var(--color-ink);
+  stroke-width: 1;
+  opacity: 0.14;
+}
+
+.dots circle {
+  fill: var(--color-ink);
+  opacity: 0.82;
+}
+
+.frame {
+  fill: none;
+  stroke: var(--color-ink);
+  stroke-width: 1.5;
+}
+
+.mark {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  fill: var(--color-paper);
+  paint-order: stroke;
+  stroke: var(--color-ink);
+  stroke-width: 8px;
+  stroke-linejoin: round;
+}

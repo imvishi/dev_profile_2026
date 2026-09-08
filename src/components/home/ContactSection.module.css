@@ -1,0 +1,72 @@
+.box {
+  display: grid;
+  gap: 28px;
+  border: 2px solid var(--color-ink);
+  padding: 30px 26px;
+}
+
+.boxKicker {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.boxCopy {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  max-width: 22em;
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.list div {
+  padding-top: 14px;
+  border-top: 1px solid var(--color-rule-hair);
+}
+
+.list div:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.list dt {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.list dd {
+  margin: 4px 0 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.list dd a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-accent);
+}
+
+@media (min-width: 720px) {
+  .box {
+    grid-template-columns: 1fr 1.3fr;
+    padding: 40px;
+  }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 28px;
+  }
+}

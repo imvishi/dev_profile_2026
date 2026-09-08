@@ -1,0 +1,114 @@
+.wrap {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  display: grid;
+  gap: 36px;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 5.4vw, 3.4rem);
+  line-height: 1.04;
+  margin-top: 8px;
+  max-width: 18em;
+}
+
+.byline {
+  margin-top: 14px;
+}
+
+.dek {
+  margin-top: 18px;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  max-width: 42em;
+  color: var(--color-ink);
+}
+
+.dropcap {
+  float: left;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 4.4rem;
+  line-height: 0.78;
+  padding-right: 10px;
+  padding-top: 4px;
+  color: var(--color-accent);
+}
+
+.continue {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 3px;
+}
+
+.rail {
+  border-top: var(--rule-thick) solid var(--color-ink);
+  padding-top: 18px;
+}
+
+.railHeading {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: 16px;
+}
+
+.railList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.railList li {
+  padding: 16px 0;
+  border-top: 1px solid var(--color-rule-hair);
+}
+
+.railList li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.railHeadline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.08rem;
+  line-height: 1.25;
+  margin-top: 5px;
+}
+
+.railHeadline a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-accent);
+}
+
+.railByline {
+  margin-top: 8px;
+}
+
+@media (min-width: 960px) {
+  .wrap {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 56px;
+    padding-top: 44px;
+  }
+
+  .rail {
+    border-top: 0;
+    border-left: 1px solid var(--color-rule-soft);
+    padding-top: 0;
+    padding-left: 40px;
+  }
+}

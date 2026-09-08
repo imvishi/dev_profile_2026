@@ -1,0 +1,77 @@
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+.quote {
+  margin: 0 0 24px;
+  padding-left: 22px;
+  border-left: 3px solid var(--color-accent);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  line-height: 1.35;
+  color: var(--color-ink);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 56em;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+.fact {
+  background: var(--color-panel);
+  border: 1px solid var(--color-rule);
+  padding: 26px;
+  align-self: start;
+}
+
+.factHeading {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-ink);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.factList div {
+  padding: 12px 0;
+  border-top: 1px solid var(--color-rule-hair);
+}
+
+.factList div:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.factList dt {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.factList dd {
+  margin: 4px 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1.7fr 1fr;
+    gap: 56px;
+  }
+}

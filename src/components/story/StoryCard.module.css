@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.artLink {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.art {
+  transition: opacity 0.15s var(--ease);
+}
+
+.card:hover .art {
+  opacity: 0.85;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.18;
+  margin-top: 6px;
+}
+
+.headline a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--color-accent);
+}
+
+.dek {
+  margin-top: 8px;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+  flex-grow: 1;
+}
+
+.byline {
+  margin-top: 12px;
+}
+
+.compact .headline {
+  font-size: 1.08rem;
+}
+
+.compact .dek {
+  font-size: 0.88rem;
+}

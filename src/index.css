@@ -1,0 +1,12 @@
+@import "./styles/global.css";
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
