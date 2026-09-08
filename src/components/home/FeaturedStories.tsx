@@ -6,7 +6,7 @@ import styles from "./FeaturedStories.module.css";
 
 export function FeaturedStories() {
   return (
-    <section id="stories" className={`section ${styles.section}`}>
+    <section id="stories" className="section">
       <div className="container">
         <SectionHeading
           eyebrow="Featured Stories"
@@ -15,10 +15,7 @@ export function FeaturedStories() {
         />
 
         <article className={styles.top}>
-          <a href={`/story/${featuredStory.slug}`} className={styles.topArt} aria-hidden="true" tabIndex={-1}>
-            <StoryArt seed={featuredStory.artSeed} label={featuredStory.company} />
-          </a>
-          <div className={styles.topBody}>
+          <div className={styles.topText}>
             <p className="kicker">{featuredStory.kicker}</p>
             <h3 className={styles.topHeadline}>
               <a href={`/story/${featuredStory.slug}`}>{featuredStory.headline}</a>
@@ -31,11 +28,12 @@ export function FeaturedStories() {
               ))}
             </ul>
           </div>
+          <a href={`/story/${featuredStory.slug}`} className={styles.topArt} aria-hidden="true" tabIndex={-1}>
+            <StoryArt seed={featuredStory.artSeed} label={featuredStory.company} />
+          </a>
         </article>
 
-        <hr className="rule rule--soft" style={{ margin: "40px 0" }} />
-
-        <div className={styles.grid}>
+        <div className={`${styles.grid} divided`}>
           {secondaryStories.map((story) => (
             <StoryCard key={story.slug} story={story} />
           ))}

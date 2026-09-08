@@ -1,23 +1,27 @@
 :root {
-  /* Paper & ink */
-  --color-paper: #f6f3ea;
-  --color-paper-alt: #efeadb;
-  --color-paper-deep: #e8e1cd;
-  --color-ink: #1a1814;
-  --color-ink-soft: #504b41;
-  --color-ink-faint: #85806f;
-  --color-rule: #1a1814;
-  --color-rule-soft: #d4cdb8;
-  --color-rule-hair: #ddd7c4;
+  /* Paper & ink — light, flat, newsroom white */
+  --color-paper: #ffffff;
+  --color-paper-alt: #f7f6f3;
+  --color-paper-deep: #efede7;
+  --color-ink: #171614;
+  --color-ink-soft: #4a473f;
+  --color-ink-faint: #79766c;
+  --color-rule: #171614;
+  --color-rule-soft: #d8d5cb;
+  --color-rule-hair: #e4e1d8;
 
-  /* Accent: brick / masthead red */
-  --color-accent: #8a2a1e;
-  --color-accent-dark: #631d14;
-  --color-accent-tint: #f0e2dc;
+  /* Accent: newsroom red, used narrowly for labels/live tags */
+  --color-accent: #c22a26;
+  --color-accent-dark: #921f1c;
+  --color-accent-tint: #fbe9e7;
+
+  /* Secondary accent: amber CTA */
+  --color-cta: #e2a63b;
+  --color-cta-ink: #2a1d05;
 
   /* Surfaces */
-  --color-panel: #fdfcf7;
-  --color-invert-bg: #1a1814;
+  --color-panel: #ffffff;
+  --color-invert-bg: #171614;
   --color-invert-ink: #f6f3ea;
 
   /* Fonts */
@@ -29,7 +33,7 @@
 
   /* Layout */
   --container-max: 1320px;
-  --container-pad: 20px;
+  --container-pad: 16px;
   --rule-thin: 1px;
   --rule-thick: 3px;
 
@@ -39,12 +43,12 @@
 
 @media (min-width: 640px) {
   :root {
-    --container-pad: 32px;
+    --container-pad: 24px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --container-pad: 40px;
+    --container-pad: 32px;
   }
 }

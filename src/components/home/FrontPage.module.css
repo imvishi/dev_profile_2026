@@ -1,91 +1,22 @@
 .wrap {
-  padding-top: 32px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 32px;
   display: grid;
-  gap: 36px;
+  gap: 28px;
 }
 
-.headline {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2rem, 5.4vw, 3.4rem);
-  line-height: 1.04;
-  margin-top: 8px;
-  max-width: 18em;
-}
-
-.byline {
-  margin-top: 14px;
-}
-
-.dek {
-  margin-top: 18px;
-  font-size: 1.08rem;
-  line-height: 1.65;
-  max-width: 42em;
-  color: var(--color-ink);
-}
-
-.dropcap {
-  float: left;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 4.4rem;
-  line-height: 0.78;
-  padding-right: 10px;
-  padding-top: 4px;
-  color: var(--color-accent);
-}
-
-.continue {
-  display: inline-block;
-  margin-top: 20px;
-  font-family: var(--font-condensed);
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--color-accent);
-  padding-bottom: 3px;
-}
-
-.rail {
-  border-top: var(--rule-thick) solid var(--color-ink);
-  padding-top: 18px;
-}
-
-.railHeading {
-  font-family: var(--font-condensed);
-  font-weight: 700;
-  font-size: 11.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-ink-faint);
-  margin-bottom: 16px;
-}
-
-.railList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
+/* ---------- Left rail ---------- */
 
 .railList li {
-  padding: 16px 0;
-  border-top: 1px solid var(--color-rule-hair);
-}
-
-.railList li:first-child {
-  border-top: 0;
-  padding-top: 0;
+  padding: 14px 0;
 }
 
 .railHeadline {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.08rem;
-  line-height: 1.25;
-  margin-top: 5px;
+  font-size: 1rem;
+  line-height: 1.28;
+  margin-top: 4px;
 }
 
 .railHeadline a:hover {
@@ -94,21 +25,137 @@
   text-decoration-color: var(--color-accent);
 }
 
-.railByline {
-  margin-top: 8px;
+/* ---------- Lead ---------- */
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+  line-height: 1.06;
+  margin-top: 6px;
 }
 
-@media (min-width: 960px) {
+.byline {
+  margin-top: 10px;
+}
+
+.dek {
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+.leadArt {
+  margin-top: 18px;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  border: 1px solid var(--color-rule-hair);
+}
+
+.continue {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ---------- Right rail ---------- */
+
+.liveBlock {
+  padding: 14px 0 16px;
+  border-bottom: 1px solid var(--color-rule-hair);
+}
+
+.liveRole {
+  margin-top: 9px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.liveCompany {
+  margin-top: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.statList li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+}
+
+.statFigure {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  flex: 0 0 auto;
+}
+
+.statLabel {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  text-align: right;
+}
+
+.railMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.railMore:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 720px) {
   .wrap {
-    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-    gap: 56px;
-    padding-top: 44px;
+    grid-template-columns: 1fr 1.6fr;
   }
 
-  .rail {
-    border-top: 0;
-    border-left: 1px solid var(--color-rule-soft);
-    padding-top: 0;
-    padding-left: 40px;
+  .right {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1060px) {
+  .wrap {
+    grid-template-columns: 0.85fr 1.6fr 0.85fr;
+    gap: 0;
+  }
+
+  .left {
+    padding-right: 28px;
+  }
+
+  .lead {
+    padding: 0 28px;
+    border-left: 1px solid var(--color-rule-hair);
+    border-right: 1px solid var(--color-rule-hair);
+  }
+
+  .right {
+    grid-column: auto;
+    padding-left: 28px;
   }
 }

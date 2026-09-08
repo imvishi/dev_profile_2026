@@ -1,51 +1,53 @@
 .card {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
 }
 
-.artLink {
-  display: block;
-  margin-bottom: 14px;
-}
-
-.art {
-  transition: opacity 0.15s var(--ease);
-}
-
-.card:hover .art {
-  opacity: 0.85;
+.text {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .headline {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 1.18;
-  margin-top: 6px;
+  font-size: 1.08rem;
+  line-height: 1.22;
+  margin-top: 5px;
 }
 
 .headline a:hover {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
   text-decoration-color: var(--color-accent);
 }
 
 .dek {
-  margin-top: 8px;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
   color: var(--color-ink-soft);
-  flex-grow: 1;
 }
 
 .byline {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
-.compact .headline {
-  font-size: 1.08rem;
+.artLink {
+  flex: 0 0 auto;
+  width: 96px;
 }
 
-.compact .dek {
-  font-size: 0.88rem;
+@media (min-width: 640px) {
+  .artLink {
+    width: 128px;
+  }
+
+  .dek {
+    display: block;
+  }
 }

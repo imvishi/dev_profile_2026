@@ -8,10 +8,10 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.top}`}>
         <div className={styles.mastCol}>
-          <p className={styles.wordmark}>The Verma Dispatch</p>
+          <p className={styles.wordmark}>{profile.name}</p>
           <p className={styles.colophon}>
-            Independently written, edited, and shipped to production by {profile.name}. Every story on this page is
-            drawn from real work — nothing here is invented.
+            Independently written, edited, and shipped to production. Every story on this page is drawn from real
+            work — nothing here is invented.
           </p>
         </div>
         <div className={styles.linkCol}>

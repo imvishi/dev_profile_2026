@@ -49,12 +49,8 @@ export function StoryArt({ seed, label, className }: StoryArtProps) {
     }
   }
 
-  const initials = label
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((word) => word[0]?.toUpperCase())
-    .join("");
+  const companyName = label.split(" — ")[0]?.trim() ?? label;
+  const initials = companyName.charAt(0).toUpperCase();
 
   return (
     <svg

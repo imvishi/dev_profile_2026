@@ -1,24 +1,31 @@
 .heading {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
-  line-height: 1.05;
-  margin-top: 6px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  line-height: 1.1;
+  margin-top: 4px;
   color: var(--color-ink);
 }
 
 .description {
-  margin-top: 10px;
-  max-width: 46em;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--color-ink-soft);
-  font-size: 1rem;
+  font-size: 0.85rem;
+  max-width: 32em;
 }
 
 .heading .rule--thick {
-  margin-top: 18px;
+  margin-top: 12px;
 }

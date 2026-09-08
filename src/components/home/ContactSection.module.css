@@ -1,8 +1,8 @@
 .box {
   display: grid;
   gap: 28px;
-  border: 2px solid var(--color-ink);
-  padding: 30px 26px;
+  border-top: var(--rule-thick) solid var(--color-ink);
+  padding: 24px 0 4px;
 }
 
 .boxKicker {

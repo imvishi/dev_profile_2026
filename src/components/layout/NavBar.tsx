@@ -1,10 +1,10 @@
 import styles from "./NavBar.module.css";
 
 const NAV_ITEMS = [
-  { label: "Front Page", href: "/#top" },
-  { label: "Featured Stories", href: "/#stories" },
-  { label: "Career Desk", href: "/#career" },
-  { label: "Technology Desk", href: "/#technology" },
+  { label: "Home", href: "/#top" },
+  { label: "Stories", href: "/#stories" },
+  { label: "Career", href: "/#career" },
+  { label: "Technology", href: "/#technology" },
   { label: "Profile", href: "/#profile" },
   { label: "Highlights", href: "/#highlights" },
   { label: "Contact", href: "/#contact" },

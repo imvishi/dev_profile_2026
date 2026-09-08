@@ -1,40 +1,125 @@
 .wrap {
   background: var(--color-paper);
-  text-align: center;
+  border-bottom: 1px solid var(--color-rule-hair);
 }
 
 .inner {
-  padding-top: 22px;
-  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-.eyebrow {
+.left {
+  display: none;
+  flex-direction: column;
   font-family: var(--font-condensed);
   font-size: 11px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-ink-faint);
-  margin-bottom: 10px;
+  flex: 1 1 0;
 }
 
-.wordmarkLink {
+.edition {
+  color: var(--color-ink-soft);
+}
+
+.centerLink {
   display: block;
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-ink);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--color-accent);
 }
 
 .wordmark {
   font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(2.4rem, 9vw, 5.2rem);
-  line-height: 0.98;
+  font-weight: 800;
+  font-size: clamp(1.35rem, 4vw, 1.9rem);
+  line-height: 1;
   letter-spacing: -0.01em;
   color: var(--color-ink);
 }
 
 .tagline {
-  margin: 14px auto 0;
-  max-width: 46em;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  margin-top: 2px;
+  font-family: var(--font-condensed);
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex: 1 1 0;
+}
+
+.cta {
+  display: none;
+  background: var(--color-cta);
+  color: var(--color-cta-ink);
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+.iconRow {
+  display: none;
+  align-items: center;
+  gap: 14px;
   color: var(--color-ink-soft);
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+}
+
+.iconRow a:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 640px) {
+  .left {
+    display: flex;
+  }
+
+  .iconRow {
+    display: flex;
+  }
+}
+
+@media (min-width: 860px) {
+  .cta {
+    display: inline-block;
+  }
 }

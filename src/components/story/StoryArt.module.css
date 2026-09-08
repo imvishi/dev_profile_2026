@@ -26,13 +26,12 @@
 }
 
 .mark {
-  font-family: var(--font-condensed);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
   fill: var(--color-paper);
   paint-order: stroke;
   stroke: var(--color-ink);
-  stroke-width: 8px;
+  stroke-width: 11px;
   stroke-linejoin: round;
 }

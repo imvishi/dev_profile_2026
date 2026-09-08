@@ -26,9 +26,8 @@
 }
 
 .fact {
-  background: var(--color-panel);
-  border: 1px solid var(--color-rule);
-  padding: 26px;
+  background: var(--color-paper-alt);
+  padding: 22px;
   align-self: start;
 }
 

@@ -4,12 +4,12 @@ import styles from "./TechnologyDesk.module.css";
 
 export function TechnologyDesk() {
   return (
-    <section id="technology" className={`section ${styles.section}`}>
+    <section id="technology" className="section">
       <div className="container">
         <SectionHeading
           eyebrow="Technology Desk"
           title="The Stack Report"
-          description="Tools and disciplines in active rotation, quoted like the market report it feels like some weeks."
+          description="Tools and disciplines in active rotation."
         />
 
         <div className={styles.grid}>
@@ -21,12 +21,7 @@ export function TechnologyDesk() {
               </div>
               <ul className={styles.itemList}>
                 {group.items.map((item) => (
-                  <li key={item}>
-                    <span>{item}</span>
-                    <span className={styles.ticker} aria-hidden="true">
-                      IN USE
-                    </span>
-                  </li>
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
