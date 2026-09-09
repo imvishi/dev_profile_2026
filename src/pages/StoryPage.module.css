@@ -45,6 +45,8 @@
 .artFrame {
   margin-top: 28px;
   border: 1px solid var(--color-ink);
+  aspect-ratio: 400 / 248;
+  overflow: hidden;
 }
 
 .layout {

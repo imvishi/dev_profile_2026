@@ -19,7 +19,6 @@ export function Footer() {
             <li><a href="/#projects">Projects</a></li>
             <li><a href="/#career">Career Desk</a></li>
             <li><a href="/#technology">Technology Desk</a></li>
-            <li><a href="/#highlights">Highlights</a></li>
           </ul>
         </div>
         <div className={styles.linkCol}>

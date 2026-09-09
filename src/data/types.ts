@@ -13,7 +13,12 @@ export interface Profile {
 
 export interface SkillGroup {
   category: string;
+  description: string;
   items: string[];
+  artSeed: number;
+  featured?: boolean;
+  /** Filename of a real image in src/assets. Falls back to generated art when omitted. */
+  image?: string;
 }
 
 export interface ExperienceEntry {
@@ -38,12 +43,6 @@ export interface Story {
   featured?: boolean;
   /** Filename of a real image in src/assets (e.g. "onelogin.webp"). Falls back to generated art when omitted. */
   image?: string;
-}
-
-export interface Highlight {
-  figure: string;
-  label: string;
-  detail: string;
 }
 
 export interface EducationEntry {

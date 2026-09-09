@@ -81,7 +81,7 @@ export function StoryArt({ seed, label, className }: StoryArtProps) {
         ))}
       </g>
       <rect width={VIEW} height={VIEW * 0.62} className={styles.frame} />
-      <text x="14" y={VIEW * 0.62 - 14} className={styles.mark}>
+      <text x="44" y={VIEW * 0.62 - 44} className={styles.mark}>
         {initials}
       </text>
     </svg>

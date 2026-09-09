@@ -1,12 +1,10 @@
 import { experience } from "../../data/experience";
 import { profile } from "../../data/profile";
-import { highlights } from "../../data/highlights";
 import { bulletins } from "../../data/bulletins";
 import vishalPhoto from "../../assets/vishal.webp";
 import styles from "./FrontPage.module.css";
 
 const currentRole = experience[0];
-const statItems = highlights.slice(0, 4);
 
 export function FrontPage() {
   return (
@@ -50,17 +48,19 @@ export function FrontPage() {
           <p className={styles.liveCompany}>{currentRole.company} · {currentRole.dateRange}</p>
         </div>
 
-        <ul className={`${styles.statList} divided`}>
-          {statItems.map((item) => (
-            <li key={item.label}>
-              <span className={styles.statFigure}>{item.figure}</span>
-              <span className={styles.statLabel}>{item.label}</span>
-            </li>
-          ))}
-        </ul>
+        <dl className={`${styles.factList} divided`}>
+          <div>
+            <dt>Based In</dt>
+            <dd>{profile.location}</dd>
+          </div>
+          <div>
+            <dt>Experience</dt>
+            <dd>{profile.yearsExperience} Years</dd>
+          </div>
+        </dl>
 
-        <a className={styles.railMore} href="#highlights">
-          All the numbers <span aria-hidden="true">→</span>
+        <a className={styles.railMore} href="#profile">
+          Read the full profile <span aria-hidden="true">→</span>
         </a>
       </aside>
     </section>

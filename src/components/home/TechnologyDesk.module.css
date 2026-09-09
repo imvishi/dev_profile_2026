@@ -1,3 +1,40 @@
+/* ---------- Top lead ---------- */
+
+.top {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-rule-hair);
+}
+
+.topArt {
+  display: block;
+  width: 100%;
+  aspect-ratio: 400 / 248;
+  border: 1px solid var(--color-ink);
+}
+
+.topHeadline {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 3.2vw, 1.9rem);
+  line-height: 1.16;
+  margin-top: 6px;
+}
+
+.topStack {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-rule-hair);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-ink-soft);
+  max-width: 40em;
+}
+
+/* ---------- Card grid ---------- */
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -12,23 +49,37 @@
   border-top: 0;
 }
 
-.kicker {
-  font-family: var(--font-condensed);
+.cardHeadline {
+  margin-top: 8px;
+  font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: 10px;
+  font-size: 1.08rem;
+  line-height: 1.32;
+  color: var(--color-ink);
 }
 
-.stack {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--color-ink);
-  max-width: 34em;
+.cardStack {
+  margin-top: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 700px) {
+  .top {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
+
+  .topText {
+    flex: 1 1 0;
+  }
+
+  .topArt {
+    flex: 1.1 1 0;
+  }
 }
 
 @media (min-width: 640px) {
@@ -38,7 +89,7 @@
 
   .card {
     border-top: 1px dashed var(--color-rule-hair);
-    padding: 30px 32px;
+    padding: 26px 32px;
   }
 
   .card:nth-child(-n + 2) {
@@ -59,10 +110,12 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .card {
+  /* Reset the 2-column odd/even rules above (equal specificity, so this
+     :nth-child(n) needs to come after them in source to win at 3 columns). */
+  .card:nth-child(n) {
+    padding: 28px 36px;
     border-top: 1px dashed var(--color-rule-hair);
-    border-left: 0;
-    padding: 32px 36px;
+    border-left: 1px solid var(--color-rule-hair);
   }
 
   .card:nth-child(-n + 3) {
@@ -71,9 +124,6 @@
 
   .card:nth-child(3n + 1) {
     padding-left: 0;
-  }
-
-  .card:not(:nth-child(3n + 1)) {
-    border-left: 1px solid var(--color-rule-hair);
+    border-left: 0;
   }
 }

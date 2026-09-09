@@ -9,6 +9,7 @@
 .topArt {
   display: block;
   width: 100%;
+  aspect-ratio: 400 / 248;
 }
 
 .topHeadline {
