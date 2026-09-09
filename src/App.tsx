@@ -6,6 +6,9 @@ import { BulletinPage } from "./pages/BulletinPage";
 import { Home } from "./pages/Home";
 import { StoryPage } from "./pages/StoryPage";
 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +27,8 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <SpeedInsights />
+      <Analytics/>
     </BrowserRouter>
   );
 }
