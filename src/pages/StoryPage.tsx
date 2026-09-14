@@ -1,11 +1,33 @@
 import { Navigate, useParams } from "react-router-dom";
 import { stories } from "../data/stories";
 import { StoryVisual } from "../components/story/StoryVisual";
+import { profile } from "../data/profile";
+import { SITE_URL, useDocumentHead } from "../lib/useDocumentHead";
 import styles from "./StoryPage.module.css";
 
 export function StoryPage() {
   const { slug } = useParams();
   const story = stories.find((s) => s.slug === slug);
+
+  useDocumentHead({
+    title: story ? `${story.headline} — ${story.company}` : "Story not found",
+    description: story?.dek ?? "",
+    path: story ? `/story/${story.slug}` : undefined,
+    type: "article",
+    noindex: !story,
+    structuredData: story
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: story.headline,
+          description: story.dek,
+          author: { "@type": "Person", name: profile.name, url: SITE_URL },
+          about: story.company,
+          keywords: story.tags.join(", "),
+          url: `${SITE_URL}/story/${story.slug}`,
+        }
+      : undefined,
+  });
 
   if (!story) {
     return <Navigate to="/" replace />;

@@ -1,12 +1,30 @@
 import { Navigate, useParams } from "react-router-dom";
 import { bulletins } from "../data/bulletins";
 import { StoryVisual } from "../components/story/StoryVisual";
+import { SITE_URL, useDocumentHead } from "../lib/useDocumentHead";
 import storyStyles from "./StoryPage.module.css";
 import styles from "./BulletinPage.module.css";
 
 export function BulletinPage() {
   const { slug } = useParams();
   const bulletin = bulletins.find((b) => b.slug === slug);
+
+  useDocumentHead({
+    title: bulletin ? bulletin.headline : "Update not found",
+    description: bulletin?.dek ?? "",
+    path: bulletin ? `/update/${bulletin.slug}` : undefined,
+    type: "article",
+    noindex: !bulletin,
+    structuredData: bulletin
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: bulletin.headline,
+          description: bulletin.dek,
+          url: `${SITE_URL}/update/${bulletin.slug}`,
+        }
+      : undefined,
+  });
 
   if (!bulletin) {
     return <Navigate to="/" replace />;
