@@ -1,0 +1,23 @@
+.toggle {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-rule-soft);
+  border-radius: 3px;
+  color: var(--color-ink-soft);
+  transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+
+.toggle:hover,
+.toggle:focus-visible {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}

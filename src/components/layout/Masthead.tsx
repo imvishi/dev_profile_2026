@@ -1,5 +1,6 @@
 import { profile } from "../../data/profile";
 import { GithubIcon, LinkedinIcon, MailIcon } from "../icons/Icons";
+import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Masthead.module.css";
 
 const today = new Date();
@@ -28,6 +29,7 @@ export function Masthead() {
         </a>
 
         <div className={styles.right}>
+          <ThemeToggle />
           <nav className={styles.iconRow} aria-label="Elsewhere">
             <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
               <GithubIcon className={styles.icon} />

@@ -213,7 +213,7 @@ p {
   position: absolute;
   left: 12px;
   top: -60px;
-  background: var(--color-ink);
+  background: var(--color-invert-bg);
   color: var(--color-invert-ink);
   padding: 10px 16px;
   z-index: 200;

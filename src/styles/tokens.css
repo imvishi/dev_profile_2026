@@ -39,6 +39,8 @@
 
   /* Motion */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  color-scheme: light;
 }
 
 @media (min-width: 640px) {
@@ -51,4 +53,34 @@
   :root {
     --container-pad: 32px;
   }
+}
+
+/* ---------- Dark theme ----------
+   Light is always the default, regardless of OS preference — dark only applies when the
+   user explicitly toggles it (see ThemeToggle / useTheme), which sets [data-theme="dark"].
+   --color-invert-bg / --color-invert-ink are intentionally NOT redefined here: a few
+   elements (site footer, skip link) use them as a fixed dark chip regardless of the
+   active theme, so they must stay constant across both palettes. */
+
+:root[data-theme="dark"] {
+  --color-paper: #16151a;
+  --color-paper-alt: #201f25;
+  --color-paper-deep: #29282e;
+  --color-ink: #f2f0ea;
+  --color-ink-soft: #c7c4b9;
+  --color-ink-faint: #918e83;
+  --color-rule: #f2f0ea;
+  --color-rule-soft: #3a3841;
+  --color-rule-hair: #2b2a30;
+
+  --color-accent: #e2453f;
+  --color-accent-dark: #ff7a72;
+  --color-accent-tint: #2a1513;
+
+  --color-cta: #e2a63b;
+  --color-cta-ink: #2a1d05;
+
+  --color-panel: #201f25;
+
+  color-scheme: dark;
 }
