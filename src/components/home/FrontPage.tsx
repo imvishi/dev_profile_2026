@@ -30,7 +30,14 @@ export function FrontPage() {
         <h2 className={styles.headline}>I build software that scales and makes an impact.</h2>
         <p className={styles.dek}>{profile.summary}</p>
         <div className={styles.leadArt}>
-          <img src={vishalPhoto} alt={profile.name} className={styles.leadPhoto} />
+          <img
+            src={vishalPhoto}
+            alt={profile.name}
+            className={styles.leadPhoto}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
         <a className={styles.continue} href="#profile">
           Continue reading — full profile <span aria-hidden="true">→</span>

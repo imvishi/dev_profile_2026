@@ -11,9 +11,10 @@ interface VisualSubject {
 interface StoryVisualProps {
   story: VisualSubject;
   className?: string;
+  priority?: boolean;
 }
 
-export function StoryVisual({ story, className }: StoryVisualProps) {
+export function StoryVisual({ story, className, priority }: StoryVisualProps) {
   const src = story.image ? projectImages[story.image] : undefined;
 
   if (src) {
@@ -22,6 +23,9 @@ export function StoryVisual({ story, className }: StoryVisualProps) {
         src={src}
         alt={story.company}
         className={`${styles.art} ${styles.artImage} ${className ?? ""}`}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding="async"
       />
     );
   }

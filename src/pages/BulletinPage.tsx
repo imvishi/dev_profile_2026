@@ -44,7 +44,10 @@ export function BulletinPage() {
       <p className={`byline ${storyStyles.byline}`}>{bulletin.dateline}</p>
 
       <div className={storyStyles.artFrame}>
-        <StoryVisual story={{ image: bulletin.image, artSeed: bulletin.artSeed, company: bulletin.kicker }} />
+        <StoryVisual
+          story={{ image: bulletin.image, artSeed: bulletin.artSeed, company: bulletin.kicker }}
+          priority
+        />
       </div>
 
       <div className={storyStyles.layout}>

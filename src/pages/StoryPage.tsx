@@ -53,7 +53,7 @@ export function StoryPage() {
       </p>
 
       <div className={styles.artFrame}>
-        <StoryVisual story={story} />
+        <StoryVisual story={story} priority />
       </div>
 
       <div className={styles.layout}>

@@ -32,7 +32,7 @@ export function FeaturedStories() {
             </ul>
           </div>
           <a href={`/story/${featuredStory.slug}`} className={styles.topArt} aria-hidden="true" tabIndex={-1}>
-            <StoryVisual story={featuredStory} />
+            <StoryVisual story={featuredStory} priority />
           </a>
         </article>
 
