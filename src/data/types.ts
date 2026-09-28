@@ -21,6 +21,14 @@ export interface SkillGroup {
   image?: string;
 }
 
+export interface TechItem {
+  name: string;
+  /** Devicon path under icons/, e.g. "react/react-original". */
+  icon: string;
+  /** Mostly-black logo that needs inverting to stay visible in dark mode. */
+  invertOnDark?: boolean;
+}
+
 export interface ExperienceEntry {
   company: string;
   role: string;

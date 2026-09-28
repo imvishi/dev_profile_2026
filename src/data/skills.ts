@@ -1,4 +1,31 @@
-import type { SkillGroup } from "./types";
+import type { SkillGroup, TechItem } from "./types";
+
+/** Logos for skill items, keyed by the exact item string used in skillGroups.
+ *  Items without an entry (concepts like "Microservices") render as plain text. */
+export const techIcons: Record<string, Omit<TechItem, "name">> = {
+  Ruby: { icon: "ruby/ruby-original" },
+  "Ruby on Rails": { icon: "rails/rails-plain" },
+  JavaScript: { icon: "javascript/javascript-original" },
+  Python: { icon: "python/python-original" },
+  Kotlin: { icon: "kotlin/kotlin-original" },
+  Java: { icon: "java/java-original" },
+  React: { icon: "react/react-original" },
+  "Node.js": { icon: "nodejs/nodejs-original" },
+  Android: { icon: "android/android-original" },
+  PostgreSQL: { icon: "postgresql/postgresql-original" },
+  MySQL: { icon: "mysql/mysql-original" },
+  Redis: { icon: "redis/redis-original" },
+  DynamoDB: { icon: "dynamodb/dynamodb-original" },
+  RabbitMQ: { icon: "rabbitmq/rabbitmq-original" },
+  "AWS (EC2, ECS, Lambda, S3)": {
+    icon: "amazonwebservices/amazonwebservices-original-wordmark",
+    invertOnDark: true,
+  },
+  Docker: { icon: "docker/docker-original" },
+  Kubernetes: { icon: "kubernetes/kubernetes-original" },
+  "GitHub Actions": { icon: "githubactions/githubactions-original" },
+  Linux: { icon: "linux/linux-original" },
+};
 
 export const skillGroups: SkillGroup[] = [
   {
